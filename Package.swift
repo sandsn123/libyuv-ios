@@ -21,7 +21,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Libyuv",
-            path: "Sources/libyuv-ios/libyuv.xcframework"
+            path: "libyuv.xcframework"
         )
     ]
 )
