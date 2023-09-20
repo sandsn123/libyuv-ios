@@ -10,13 +10,9 @@ let package = Package(
         .macOS(.v12), .iOS(.v13)
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Libyuv",
             targets: ["Libyuv"])
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
     ],
     targets: [
         .binaryTarget(
