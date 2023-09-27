@@ -12,17 +12,13 @@ let package = Package(
     products: [
         .library(
             name: "Libyuv",
-            targets: ["Libyuv"])
+            targets: ["Libyuv", "LibyuvXCframework"])
     ],
     targets: [
         .binaryTarget(
             name: "LibyuvXCframework",
             path: "libyuv.xcframework"
         ),
-        .target(name: "Libyuv",
-                        dependencies: [
-                            .target(name: "LibyuvXCframework")
-                        ],
-                        path: "Sources")
+        .target(name: "Libyuv", path: "Sources")
     ]
 )
