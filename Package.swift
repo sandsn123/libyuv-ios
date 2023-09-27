@@ -12,19 +12,19 @@ let package = Package(
     products: [
         .library(
             name: "Libyuv",
-            targets: ["Libyuv", "LibyuvXCframework"])
+            targets: ["Libyuv", "LibyuvXCframework", "Adyen3DS2"])
     ],
     targets: [
         .binaryTarget(
             name: "LibyuvXCframework",
             path: "./libyuv.xcframework"
         ),
+        .binaryTarget(
+            name: "Adyen3DS2",
+            path: "./Adyen3DS2.xcframework"
+        ),
         .target(name: "Libyuv",
-                dependencies: ["LibyuvXCframework"],
-                path: "Sources",
-                cSettings: [
-                    .headerSearchPath("**"),
-                ]
+                path: "Sources"
             )
     ]
 )
