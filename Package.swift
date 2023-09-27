@@ -17,8 +17,14 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "LibyuvXCframework",
-            path: "libyuv.xcframework"
+            path: "./libyuv.xcframework"
         ),
-        .target(name: "Libyuv", path: "Sources")
+        .target(name: "Libyuv",
+                dependencies: ["LibyuvXCframework"],
+                path: "Sources",
+                cSettings: [
+                    .headerSearchPath("**"),
+                ]
+            )
     ]
 )
