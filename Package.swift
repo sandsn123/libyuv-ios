@@ -12,12 +12,12 @@ let package = Package(
     products: [
         .library(
             name: "Libyuv",
-            targets: ["Libyuv", "LibyuvXCframework", "Adyen3DS2"])
+            targets: ["Libyuv", "libyuv_ios", "Adyen3DS2"])
     ],
     targets: [
         .binaryTarget(
-            name: "LibyuvXCframework",
-            path: "./libyuv.xcframework"
+            name: "libyuv_ios",
+            path: "./libyuv_ios.xcframework"
         ),
         .binaryTarget(
             name: "Adyen3DS2",
