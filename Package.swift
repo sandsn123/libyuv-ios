@@ -12,19 +12,23 @@ let package = Package(
     products: [
         .library(
             name: "Libyuv",
-            targets: ["Libyuv"])
+            targets: ["LibyuvPackage"])
     ],
     targets: [
         .target(
-            name: "Libyuv",
-            dependencies: ["C"],
-            path: "Sources/libyuv-ios"),
+            name: "LibyuvPackage",
+            dependencies: ["Libyuv"],
+            path: "Sources/Swift"),
         .target(
-            name: "C",
+            name: "Libyuv",
             dependencies: ["LibyuvXC"],
             path: "Sources/C"),
         .binaryTarget(
             name: "LibyuvXC",
             path: "Libs/libyuv_ios.xcframework"),
+        .testTarget(
+            name: "Libyuv-Tests",
+            dependencies: ["Libyuv"],
+            path: "Tests/Swift"),
     ]
 )

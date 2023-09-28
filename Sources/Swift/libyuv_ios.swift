@@ -1,6 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
-import C
+import Libyuv
 
 class Brdge {
     func test() {
